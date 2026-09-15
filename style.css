@@ -309,14 +309,38 @@ p {
     display: none;
 }
 
-#partition {
-    z-index: 7;
-
+.partitionWrapper {
     position: relative;
-    top: 0px;
-    left: 1020px;
+    display: inline-block;
+    margin-left: 1020px;
+}
 
+#partition {
     width: 1500px;
+    display: block;
+}
+
+.partitionIcons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 7;
+}
+
+.socialIcon {
+    width: 250px;
+    transition: transform 0.1s ease;
+
+    padding: 20px;
+}
+
+.socialIcon:hover {
+    transform: scale(1.15);
 }
 
 #Lpartition {
