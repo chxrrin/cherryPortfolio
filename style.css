@@ -321,22 +321,21 @@ p {
 }
 
 .partitionIcons {
-    position: relative;
-    top: -550px;
-    left: 600px;
-    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 120px;
+    right: -15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    z-index: 7;
+    z-index: 500;
 }
 
 .socialIcon {
-    width: 250px;
+    width: 200px;
     transition: transform 0.1s ease;
 
-    padding: 20px;
+    padding: 10px;
 }
 
 .socialIcon:hover {
@@ -347,7 +346,7 @@ p {
     z-index: -1;
 
     position: relative;
-    top: -1695px;
+    top: -1075px;
     left: -1200px;
 
     width: 1500px;
