@@ -20,7 +20,9 @@
 
     <div class="mainWrapper">
         <div class="main">
-            <img src="portfolioAssets/earphones.png" id="earphones">
+            <img src="portfolioAssets/earsphones.png" id="earphones">
+            <img src="portfolioAssets/rightPartition.png" id="partition">
+            <img src="portfolioAssets/leftPartition.png" id="Lpartition">
 
             <div id="leftSide">
                 <div class="id">
@@ -29,27 +31,39 @@
 
                 <div class="ipod">
                     <div id="ipodScreen">
-                        //ipod tingz
+                        <div id="nowPlaying">
+                            <div id="trackTitle">— — —</div>
+                            <div id="trackArtist"></div>
+                            <div id="progressTrack">
+                                <div id="progressFill"></div>
+                            </div>
+                            <div id="timeRow"><span id="timeNow">0:00</span><span id="timeEnd">0:00</span></div>
+                        </div>
                     </div>
                     <div id="ipodCircle">
-                        //ipod buttons
+                        <button class="wheelBtn" id="btnPrev" aria-label="Previous">⏮</button>
+                        <button class="wheelBtn" id="btnNext" aria-label="Next">⏭</button>
+                        <button id="wheelCenter" aria-label="Play or pause">▶</button>
                     </div>
                 </div>
+
+                <audio id="ipodAudio" preload="metadata"></audio>
             </div>
 
             <div id="rightSide">
                 <div class="portfolio">
                     <div class="tabBar">
-                        <img src="portfolioAssets/projectsTab.png" alt="projects" class="tabs" id="projectsTab">
-                        <img src="portfolioAssets/experienceTab.png" alt="experience" class="tabs" id="experienceTab">
-                        <img src="portfolioAssets/aboutMeTab.png" alt="aboutMe" class="tabs" id="aboutMeTab">
+                        <img src="portfolioAssets/projects.png" alt="projects" class="tabs" id="projectsTab">
+                        <img src="portfolioAssets/experience.png" alt="experience" class="tabs" id="experienceTab">
+                        <img src="portfolioAssets/aboutMe.png" alt="aboutMe" class="tabs" id="aboutMeTab">
                     </div>
                     <div id="tabContent">
                         <div id="paper">
                             <div class="content" id="projectsContent">
-                                <div class="contentText">
+                                <a class="contentText" href="https://store.steampowered.com/app/4200560/Stitchlings/"
+                                    target="_blank">
                                     <div>
-                                        <h1>Stitchlings</h1>
+                                        <h1><span class="text-highlight">Stitchlings</span></h1>
                                         <p>Stitchlings is a combat adventure playable alone or with a friend, set in a
                                             haunted stop motion set called The Workshop. You play as the titular
                                             Stitchlings, who have the ability to stitch toy-like parts dropped by
@@ -58,79 +72,126 @@
                                         </p>
                                     </div>
                                     <img src="portfolioAssets/stitchlings.jpg" alt="stitchlingsPoster" class="poster">
-                                </div>
+                                    <span class="hoverTip">View on Steam</span>
+                                </a>
 
-                                <div class="contentText">
+                                <a class="contentText" href="https://store.steampowered.com/app/4333580/Wok_This_Way/"
+                                    target="_blank">
                                     <div>
-                                        <h1>Wok This Way</h1>
-                                        <p>paragraph</p>
+                                        <h1><span class="text-highlight">Wok This Way</span></h1>
+                                        <p>Wok This Way is a 3D food themed 4v4 TPS online party game, where
+                                            players use suction guns to collect ingredients that grant different
+                                            abilities.
+                                        </p>
+                                        <p>Teams compete to gather ingredients and decide whether to boost teammates,
+                                            sabotage opponents, or deposit the ingredients into their team’s cooking
+                                            pot.
+                                        </p>
                                     </div>
 
                                     <img src="portfolioAssets/wokThisWay.png" alt="wokThisWayPoster" class="poster">
-                                </div>
+                                    <span class="hoverTip">View on Steam</span>
+                                </a>
 
                                 <div class="contentText">
                                     <div>
-                                        <h1>Alibi</h1>
-                                        <p>paragraph</p>
+                                        <h1><span class="text-highlight">Alibi</span></h1>
+                                        <p>A narrative-driven,
+                                            2D Puzzle Adventure game
+                                            about Unresolved Past Traumas.
+                                        </p>
+                                        <p>Play as a troubled therapist
+                                            who can travel into others’ memories to liberate them from triggering
+                                            deja-vu moments.</p>
+                                        <p>Use this power to find a missing high school friend...</p>
                                     </div>
 
                                     <img src="portfolioAssets/alibi.png" alt="alibiPoster" class="poster">
+                                    <span class="hoverTip">No Steam Page :(</span>
                                 </div>
                             </div>
 
                             <div class="content" id="experienceContent">
                                 <div class="contentText">
                                     <div>
-                                        <h1>Game User Research</h1>
-                                        <p>User Behavior Research Intern
-                                        </p>
+                                        <h1><span class="text-highlight">Game User Research Intern</span></h1>
+                                        <h3>at User Behavioristics (UBR)</h3>
+                                        <span class="dateRange">June 2024 - November 2025</span>
+                                        <ul class="resumeList">
+                                            <li>Conducted usability testing sessions for multiple game prototypes,
+                                                identifying key user pain points and design improvements.</li>
+                                            <li>Analyzed qualitative and quantitative user behavior data to provide
+                                                actionable feedback to game developers, improving user experience and
+                                                accessibility.</li>
+                                        </ul>
                                     </div>
-                                    <img src="portfolioAssets/stitchlings.jpg" alt="stitchlingsPoster" class="poster">
+                                    <img src="portfolioAssets/ubr.webp" alt="stitchlingsPoster" class="poster">
                                 </div>
 
                                 <div class="contentText">
                                     <div>
-                                        <h1>Usability Lead</h1>
-                                        <p>Stitchlings, Alibi</p>
+                                        <h1><span class="text-highlight">QA Lead/ UX/Community Manager</span></h1>
+                                        <h3>at Wavedash</h3>
+                                        <span class="dateRange">May 2026 – Present</span>
+                                        <ul class="resumeList">
+                                            <li>Provided thorough QA reports of new games introduced to us.</li>
+                                            <li>Consistently found and proposed fixes for UX issues.</li>
+                                            <li>Greeted and interacted with the community as much as possible to grow
+                                                trust between them and us.</li>
+                                        </ul>
                                     </div>
-
-                                    <img src="portfolioAssets/wokThisWay.png" alt="wokThisWayPoster" class="poster">
+                                    <img src="portfolioAssets/logo.svg" alt="wokThisWayPoster" class="poster">
                                 </div>
 
                                 <div class="contentText">
                                     <div>
-                                        <h1>UI/UX/Narrative Design</h1>
-                                        <p>Thirteen Forty Seven Intern</p>
+                                        <h1><span class="text-highlight">UI/UX/Narrative Design Intern</span></h1>
+                                        <h3>at Thirteen Forty Seven</h3>
+                                        <span class="dateRange">May 2026 – Present</span>
+                                        <ul class="resumeList">
+                                            <li>Creating wonderful UI/UX for an unannounced game.</li>
+                                            <li>Forming the backbone of narrative design!</li>
+                                        </ul>
                                     </div>
-
-                                    <img src="portfolioAssets/alibi.png" alt="alibiPoster" class="poster">
-                                </div>
-
-                                <div class="contentText">
-                                    <div>
-                                        <h1>UI Engineer</h1>
-                                        <p>Wok This Way</p>
-                                    </div>
-
-                                    <img src="portfolioAssets/alibi.png" alt="alibiPoster" class="poster">
+                                    <img src="portfolioAssets/1347.jpeg" alt="alibiPoster" class="poster">
                                 </div>
                             </div>
 
                             <div class="content" id="aboutMeContent">
                                 <div class="contentText">
                                     <div>
-                                        <h1>Hi, I'm Cherry!</h1>
+                                        <h1>Hi, I'm <span class="text-highlight">Cherry!</span></h1>
                                         <p> I love making games, UX research or design, and web dev!
                                         </p>
+                                        <br>
+                                        <p>My Favorite Games: </p>
+                                        <div id="games">
+                                            <a href="https://store.steampowered.com/app/1568400/Sheepy_A_Short_Adventure/"
+                                                target="_blank"><img src="portfolioAssets/sheepy.jpeg" alt="sheepy"
+                                                    class="gameImg"></a>
+                                            <a href="https://www.leagueoflegends.com/en-us/" target="_blank"><img
+                                                    src="portfolioAssets/league.jpeg" alt="league" class="gameImg"></a>
+                                            <a href="https://wutheringwaves.kurogames.com/en/" target="_blank"><img
+                                                    src="portfolioAssets/wuthering.jpeg" alt="wuthering"
+                                                    class="gameImg"></a>
+                                        </div>
                                     </div>
-                                    <img src="portfolioAssets/stitchlings.jpg" alt="stitchlingsPoster" class="poster">
+                                    <img src="portfolioAssets/me.PNG" alt="me" class="poster">
                                 </div>
 
                                 <div class="contentText">
                                     <div>
                                         <h1>Stay in Touch!</h1>
-                                        <p>probably another div here or two with socials</p>
+                                        <p>Find me here—</p>
+                                        <div class="socialLinks">
+                                            <a href="https://www.linkedin.com/in/yeru-cherry-lee/"
+                                                target="_blank">LinkedIn</a>
+                                            <a href="https://www.instagram.com/chxrrycakie?utm_source=qr"
+                                                target="_blank">Instagram</a>
+                                            <a href="https://discord.com/users/701557956386488421"
+                                                target="_blank">Discord</a>
+                                            <a href="mailto:musichime07@gmail.com">Email</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -142,9 +203,7 @@
     </div>
 
     <div class="bottombar">
-        <!-- SWAP: replace each href with your real profile link, and each icon image with your own -->
-        <a href="https://linkedin.com/in/your-handle" target="_blank" title="LinkedIn">
-            <img src="https://placehold.co/40x40/0077B5/ffffff?text=in" alt="LinkedIn">
+        <a href="www.linkedin.com/in/yeru-cherry-lee" target="_blank" title="LinkedIn">
         </a>
         <a href="https://instagram.com/your-handle" target="_blank" title="Instagram">
             <img src="https://placehold.co/40x40/E1306C/ffffff?text=IG" alt="Instagram">
@@ -197,5 +256,83 @@
     });
 
     tabs[0].tabEl.classList.add("active");
+
+
+    //ipod
+    const playlist = [
+        { title: "Track One", artist: "Artist", src: "portfolioAssets/music/track1.mp3" },
+        { title: "Track Two", artist: "Artist", src: "portfolioAssets/music/track2.mp3" },
+        { title: "Track Three", artist: "Artist", src: "portfolioAssets/music/track3.mp3" },
+    ];
+
+    const audio = document.getElementById("ipodAudio");
+    const titleEl = document.getElementById("trackTitle");
+    const artistEl = document.getElementById("trackArtist");
+    const fill = document.getElementById("progressFill");
+    const track = document.getElementById("progressTrack");
+    const timeNow = document.getElementById("timeNow");
+    const timeEnd = document.getElementById("timeEnd");
+
+    let current = 0;
+
+    function fmt(s) {
+        if (!isFinite(s)) return "0:00";
+        const m = Math.floor(s / 60);
+        return m + ":" + String(Math.floor(s % 60)).padStart(2, "0");
+    }
+
+    function load(i, autoplay) {
+        current = (i + playlist.length) % playlist.length;
+        const t = playlist[current];
+        audio.src = t.src;
+        titleEl.textContent = t.title;
+        artistEl.textContent = t.artist;
+        fill.style.width = "0%";
+        if (autoplay) audio.play().catch(() => { });
+    }
+
+    const center = document.getElementById("wheelCenter");
+
+    center.addEventListener("click", () => {
+        if (audio.paused) audio.play().catch(() => { });
+        else audio.pause();
+    });
+
+    audio.addEventListener("play", () => { center.textContent = "⏸"; });
+    audio.addEventListener("pause", () => { center.textContent = "▶"; });
+
+    document.getElementById("btnNext").addEventListener("click", () => load(current + 1, true));
+
+    document.getElementById("btnPrev").addEventListener("click", () => {
+        if (audio.currentTime > 3) audio.currentTime = 0;
+        else load(current - 1, true);
+    });
+
+    audio.addEventListener("timeupdate", () => {
+        if (audio.duration) fill.style.width = (audio.currentTime / audio.duration) * 100 + "%";
+        timeNow.textContent = fmt(audio.currentTime);
+    });
+
+    audio.addEventListener("loadedmetadata", () => { timeEnd.textContent = fmt(audio.duration); });
+    audio.addEventListener("ended", () => load(current + 1, true));
+
+    track.addEventListener("click", (e) => {
+        const r = track.getBoundingClientRect();
+        if (audio.duration) audio.currentTime = ((e.clientX - r.left) / r.width) * audio.duration;
+    });
+
+    load(0, false);
+
+    //clock
+    function updateClock() {
+        const now = new Date();
+        document.getElementById("clock").textContent = now.toLocaleTimeString([], {
+            hour: "numeric",
+            minute: "2-digit",
+        });
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
 
 </script>
