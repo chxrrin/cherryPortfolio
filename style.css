@@ -46,6 +46,12 @@ body {
     font-family: 'Caveat', cursive;
     font-size: 26px;
     font-weight: 700;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
 }
 
 .clock {
@@ -333,13 +339,13 @@ p {
 }
 
 #rightSide:hover {
-    transform: scale(1.2) translate(90px, -27px);
+    transform: scale(1.32) translate(150px, -60px);
     z-index: 200;
 
-    border: 8px solid rgb(108, 108, 72);
+    border: 8px solid rgb(68, 0, 142);
     border-radius: 30px;
 
-    background-color: #d7cf83;
+    background-color: #d8c7f4;
 }
 
 #earphones {
@@ -372,21 +378,15 @@ p {
 }
 
 .partitionIcons {
-    position: fixed;
-    top: 120px;
-    right: -15px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 20px;
-    z-index: 500;
 }
 
 .socialIcon {
-    width: 200px;
+    width: 50px;
     transition: transform 0.1s ease;
-
-    padding: 10px;
 }
 
 .socialIcon:hover {
