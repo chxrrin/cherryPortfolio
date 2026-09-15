@@ -73,11 +73,21 @@ body {
     border-radius: 8px;
 }
 
-#idCard {
+.id {
     position: relative;
     width: 500px;
     top: 0px;
     left: -220px;
+
+    transition: transform 0.15s ease;
+}
+
+#idCard {
+    width: 500px;
+}
+
+.id:hover {
+    transform: translateY(15px) scale(1.15);
 }
 
 #tabContent {
@@ -89,9 +99,11 @@ body {
     width: 950px;
     height: 800px;
 
-    position: relative;
-    left: -225px;
-    top: -45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 15px;
 
     z-index: 10;
 }
@@ -102,9 +114,6 @@ body {
     background-position: center;
     background-size: cover;
 
-    position: relative;
-    left: 50px;
-    top: 25px;
     width: 850px;
     height: 730px;
 
@@ -175,7 +184,9 @@ h3 {
     margin-bottom: 8px;
 }
 
-p, .resumeList li, .dateRange {
+p,
+.resumeList li,
+.dateRange {
     font-family: 'Patrick Hand', cursive;
 }
 
@@ -218,20 +229,35 @@ p {
     display: flex;
     flex-direction: row;
 
-    position: relative;
-    left: -100px;
+    margin-bottom: -45px;
+    margin-left: 100px;
+    margin-top: -10px;
 
     z-index: 200;
 }
 
 .tabs {
     width: 200px;
+    height: 150px;
     filter: brightness(0.7);
-    transition: filter 0.15s ease;
+    transition: filter 0.15s ease, transform 0.15s ease;
+    transform: translateY(0) scale(1);
+}
+
+.tabs:hover {
+    transform: translateY(-15px) scale(1);
+}
+
+.tabs:active {
+    transform: translateY(-8px) scale(0.9);
 }
 
 .tabs.active {
     filter: brightness(1);
+}
+
+.tabs.active:hover {
+    transform: translateY(-15px) scale(1);
 }
 
 .ipod {
@@ -252,6 +278,12 @@ p {
     top: 55px;
     left: -195px;
     transform: rotate(-13deg);
+
+    transition: transform 0.15s ease;
+}
+
+.ipod:hover {
+    transform: scale(1.1) rotate(-13deg) translateY(-25px);
 }
 
 #ipodScreen {
@@ -286,9 +318,28 @@ p {
 }
 
 #rightSide {
-    position: absolute;
-    top: 20px;
-    left: 700px;
+    position: relative;
+    left: 475px;
+    top: -2125px;
+
+    width: 950px;
+    height: 925px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.15s ease;
+}
+
+#rightSide:hover {
+    transform: scale(1.2) translate(90px, -27px);
+    z-index: 200;
+
+    border: 8px solid rgb(108, 108, 72);
+    border-radius: 30px;
+
+    background-color: #d7cf83;
 }
 
 #earphones {
@@ -298,7 +349,7 @@ p {
     width: 1450px;
     object-fit: contain;
     pointer-events: none;
-    z-index: 999;
+    z-index: 199;
 }
 
 #experienceContent {
@@ -515,7 +566,7 @@ p {
 
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: hidden;
     gap: 10px;
 
     width: max-content;
