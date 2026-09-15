@@ -321,10 +321,9 @@ p {
 }
 
 .partitionIcons {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-100%, -50%);
+    position: relative;
+    top: -900px;
+    left: -165px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -347,7 +346,7 @@ p {
     z-index: -1;
 
     position: relative;
-    top: -1075px;
+    top: -1695px;
     left: -1200px;
 
     width: 1500px;
