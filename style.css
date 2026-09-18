@@ -343,7 +343,7 @@ p {
     flex-direction: column;
 }
 
-#rightSideHover {
+#rightSide {
     position: relative;
     left: 525px;
     top: -3025px;
@@ -352,24 +352,16 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#rightSide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.15s ease;
+    transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease, border-radius 0.15s ease, background-color 0.15s ease;
 }
 
 #rightSide.expanded {
-    transform: scale(1.25) translate(150px, -52px);
+    transform: scale(1.25) translate(150px, -72px);
     z-index: 200;
     border: 8px solid rgb(68, 0, 142);
     border-radius: 30px;
-
     width: 950px;
     height: 950px;
-
     background-color: #d8c7f4;
 }
 
@@ -695,5 +687,35 @@ a.contentText:hover {
 
     50% {
         transform: translateY(4px);
+    }
+}
+
+.marqueeWrap {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+.marqueeText {
+    display: inline-block;
+    white-space: nowrap;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+.marqueeWrap.scrolling .marqueeText {
+    animation: marqueeScroll linear infinite;
+    animation-duration: var(--marquee-duration, 8s);
+}
+
+@keyframes marqueeScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
     }
 }
