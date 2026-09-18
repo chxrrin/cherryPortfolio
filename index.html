@@ -61,6 +61,11 @@
                         <button class="wheelBtn" id="btnNext" aria-label="Next">⏭</button>
                         <button id="wheelCenter" aria-label="Play or pause">▶</button>
                     </div>
+
+                    <div id="musicPrompt">
+                        <span>Want some music while you're here?</span>
+                        <span id="musicArrow">↬</span>
+                    </div>
                 </div>
 
                 <audio id="ipodAudio" preload="metadata"></audio>
@@ -279,9 +284,9 @@
 
     //ipod
     const playlist = [
-        { title: "", artist: "Artist", src: "portfolioAssets/music/track1.mp3" },
-        { title: "", artist: "Artist", src: "portfolioAssets/music/track2.mp3" },
-        { title: "", artist: "Artist", src: "portfolioAssets/music/track3.mp3" },
+        { title: "Stitchlings", artist: "Studio Woolworks, Victor Xue", src: "portfolioAssets/music/Stitchlings.mp3" },
+        { title: "Night Summer Lounge", artist: "Bransboynd", src: "portfolioAssets/music/nightSummerLounge.mp3" },
+        { title: "Dark Cyberpunk", artist: "Free Music Lab", src: "portfolioAssets/music/darkCyberpunk.mp3" },
     ];
 
     const audio = document.getElementById("ipodAudio");
@@ -341,6 +346,18 @@
     });
 
     load(0, false);
+
+    const musicPrompt = document.getElementById("musicPrompt");
+
+    musicPrompt.addEventListener("click", () => {
+        audio.play().catch(() => { });
+        musicPrompt.classList.add("hidden");
+    });
+
+    audio.addEventListener("play", () => {
+        musicPrompt.classList.add("hidden");
+    });
+
 
     //clock
     function updateClock() {
