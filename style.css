@@ -345,22 +345,29 @@ p {
 
 #rightSide {
     position: relative;
-    left: 525px;
-    top: -3025px;
-    width: 900px;
-    height: 900px;
+    left: 500px;
+    top: -3030px;
+    width: 1290px;
+    height: 1530px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#rightSideInner {
+    width: 1000px;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
     transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease, border-radius 0.15s ease, background-color 0.15s ease;
 }
 
-#rightSide.expanded {
-    transform: scale(1.25) translate(150px, -72px);
+#rightSide:hover #rightSideInner {
+    transform: scale(1.25) translate(75px, -70px);
     z-index: 200;
     border: 8px solid rgb(68, 0, 142);
     border-radius: 30px;
-    width: 950px;
+    width: 1000px;
     height: 950px;
     background-color: #d8c7f4;
 }
